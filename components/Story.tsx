@@ -36,6 +36,7 @@ export default function Story() {
             src="/images/hero-pizza.jpg"
             alt="Fresh pizza being sliced at Love Letter"
             fill
+            sizes="(min-width: 768px) 50vw, 100vw"
             className="object-cover object-[38%_60%]"
           />
         </div>

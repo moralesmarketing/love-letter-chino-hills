@@ -27,7 +27,13 @@ export default function DishSpotlight({
         }`}
       >
         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-          <Image src={image} alt={imageAlt} fill className="object-cover" />
+          <Image
+            src={image}
+            alt={imageAlt}
+            fill
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className="object-cover"
+          />
         </div>
         <div>
           <div className="eyebrow mb-3">{eyebrow}</div>

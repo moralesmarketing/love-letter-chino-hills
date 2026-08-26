@@ -10,6 +10,7 @@ export default function Hero() {
           alt="Cheese pull slice from a Love Letter pizza"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-[60%_38%]"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-surface from-5% via-surface/60 via-40% to-transparent to-85%" />

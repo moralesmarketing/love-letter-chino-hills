@@ -17,6 +17,7 @@ export default function MenuPage() {
             src="/images/dish-pizza.jpg"
             alt=""
             fill
+            sizes="100vw"
             className="object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/85 to-surface/60" />

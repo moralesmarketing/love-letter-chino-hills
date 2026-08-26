@@ -3,6 +3,7 @@ import DishSpotlight from "@/components/DishSpotlight";
 import OrderDirectCTA from "@/components/OrderDirectCTA";
 import Story from "@/components/Story";
 import Testimonials from "@/components/Testimonials";
+import InstagramPanel from "@/components/InstagramPanel";
 import FAQAccordion from "@/components/FAQAccordion";
 import LocationSection from "@/components/LocationSection";
 
@@ -42,6 +43,7 @@ export default function Home() {
       <OrderDirectCTA />
       <Story />
       <Testimonials />
+      <InstagramPanel />
       <FAQAccordion />
       <LocationSection />
     </>

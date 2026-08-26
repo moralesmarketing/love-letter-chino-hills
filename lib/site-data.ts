@@ -175,6 +175,19 @@ export const reviews: Review[] = [
   },
 ];
 
+export type Reel = {
+  src: string;
+  caption: string;
+};
+
+/** Self-hosted copies of real Instagram reels, provided directly by the client. */
+export const reels: Reel[] = [
+  { src: "/videos/sweet-potato-pizza.mp4", caption: "Sweet potato pizza at its best 🍠🍕" },
+  { src: "/videos/he-is-the-best.mp4", caption: "He's the best! 🥰" },
+  { src: "/videos/we-love-our-community.mp4", caption: "And we love our community! 🌟❤️" },
+  { src: "/videos/server-wrote-for-her.mp4", caption: "Guess what the server wrote for her 😉🍕" },
+];
+
 export const faqs = [
   {
     q: "What are you known for?",
