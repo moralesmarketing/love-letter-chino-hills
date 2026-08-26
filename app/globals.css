@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: #10120f;
+  --surface-raised: #181b16;
+  --surface-line: rgba(245, 243, 236, 0.12);
+
+  --ink: #f6f4ec;
+  --ink-soft: #c7c4b6;
+  --ink-faint: #8d8b7d;
+
+  --red: #e2242f;
+  --red-dark: #b81c26;
+  --green: #17a053;
+  --green-soft: #14351f;
+  --gold: #f5a623;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-line: var(--surface-line);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-red: var(--red);
+  --color-red-dark: var(--red-dark);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-gold: var(--gold);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  text-wrap: balance;
+}
+
+::selection {
+  background: var(--red);
+  color: var(--ink);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  border-radius: 999px;
+  padding: 0.85em 1.6em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background-color 0.15s ease, opacity 0.15s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--red);
+  color: white;
+}
+.btn-primary:hover { background: var(--red-dark); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid var(--surface-line);
+}
+.btn-ghost:hover { border-color: var(--ink-soft); }
+
+.eyebrow {
+  font-family: var(--font-display), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-size: 0.8rem;
+}
+
+.section {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section { padding-inline: 2.5rem; }
 }
